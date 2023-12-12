@@ -1,0 +1,116 @@
+section{
+    &>h2{
+        color: rgba($black-color, 0.5);
+        font-weight: 400;
+        width: 90%;
+        margin: 0 auto;
+        padding: 5rem 0 13rem 0;
+
+    }
+    &>.container{
+        &>.testimonial-row{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            &>.testimonial-title{
+                .divider{
+                    margin-bottom: 35px;
+                }
+                &>h2{
+                    font-size: 3rem;
+                    width: 90%;
+                }
+            }
+            .testimonial-text{
+                display: flex;
+                align-items: center;
+            }
+            .testimonial-column{
+                margin-top: 3rem;
+                &>.quote{
+                    padding-bottom: 1rem;
+                    &>i{
+                        color: $primary-color;
+                        font-size: 1.6rem;
+                    }
+                }
+                &>.text{
+                    font-size: 1.1rem;
+                    width: 85%;
+                    font-weight: 600;
+                    padding-bottom: 1.1rem;
+                }
+
+                .avatar{
+                    .avatar-image{
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        &>img{
+                            border-radius: 50%;
+                        }
+                        &>span{
+                            text-transform: uppercase;
+                            letter-spacing: 2px;
+                            font-size: 0.9rem;
+                            font-weight: 600;
+                            color: rgba($black-color, 0.5);
+                        }
+                    }
+                  }
+            }
+        }
+    }
+}
+// ==========Media Queries for {Medium Devices}=============>>
+@media screen and (max-width: 900px) {
+    section{
+        &>h2{
+            font-size: 2rem;
+            width: 80%;
+            padding: 3.5rem 0 10rem 0;
+        }
+        .container{
+            width: $container-md;
+            .testimonial-row{
+                .testimonial-title{
+                    &>h2{
+                        font-size: 2rem;
+                    }
+                }
+                .testimonial-text{
+                    padding-top: 35px;
+                }
+                .testimonial-column{
+                    .text{
+                        width: 95%;
+                    }
+                }
+            }
+        }
+    }
+}
+// ==========Media Queries for {Medium Devices}=============>>
+@media screen and (max-width: 600px) {
+   section{
+     h2{
+        width: 90%;
+        font-size: 1.8rem;
+     }
+     .container{
+        .testimonial-row{
+            grid-template-columns: 1fr;
+            .testimonial-title{
+                &>h2{
+                    font-size: 1.9rem;
+                }
+            }
+            .testimonial-column{
+                .text{
+                    width: 100%;
+                }
+            }
+        }
+     }
+   }
+}

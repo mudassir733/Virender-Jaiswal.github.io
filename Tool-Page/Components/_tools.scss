@@ -1,0 +1,110 @@
+section{
+    .container{
+        &>p{
+            padding-bottom: 1.5rem;
+            width: 90%;
+
+        }
+        .tools-row{
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+            .tools-column{
+                display: flex;
+                align-items: center;
+                border: 2px dashed #dadada;
+                padding: 30px;
+                width: 100%;
+                gap: 4rem;
+                
+                .tool-image{
+                    width: 100px;
+                    height: 200px;
+                    display: flex;
+                    align-items: center;
+                    flex-basis: 25%;
+                   
+                    &>img{
+                        object-fit: cover;
+                        width: 100%;
+                    }
+                }
+                .details-text{
+                    flex-basis: 75%;
+                    &>.divider{
+                        margin-bottom: 2rem;
+                    }
+                    &>h2{
+                        font-size: 3rem;
+                        padding-bottom: 1.2rem;
+                    }
+                    &>p{
+                        padding-bottom: 2.5rem;
+                    }
+                    &>.btn{
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+}
+// ==========Media Queries for {Medium Devices}=============>>
+@media screen and (max-width: 900px) {
+    section{
+        .container{
+            width: $container-md;
+            .tools-row{
+                .tools-column{
+                    padding: 25px 10px;
+                    .tool-image{
+                        width: 120px;
+                        height: 200px;
+                        &>img{
+                            width: 100%;
+                        }
+                    }
+                    .details-text{
+                        &>h2{
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// ==========Media Queries for {Small Devices}=============>>
+@media screen and (max-width: 600px) {
+    section{
+        .container{
+            width: $container-md;
+            .tools-row{
+                .tools-column{
+                    padding: 25px 10px;
+                    flex-direction: column;
+                    text-align: center;
+                    gap: 1rem;
+                    .tool-image{
+                        width: 170px;
+                        height: 10vw;
+                        &>img{
+                            width: 100%;
+                        }
+                    }
+                    .details-text{
+                        &>.divider{
+                            margin: 1.6rem auto;
+                        }
+                        &>h2{
+                            font-size: 1.9rem;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

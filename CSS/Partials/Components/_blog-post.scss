@@ -1,0 +1,155 @@
+section {
+    .container {
+        .blog-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            padding-top: 3rem;
+
+            .blog {
+                width: 30vw;
+                border: 1px solid #dadada;
+
+                .blog-image {
+                    width: 100%;
+                    height: 220px;
+                    position: relative;
+
+                    &>.overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-color: rgba($black-color, 0.8);
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        transition: opacity 0.5s ease;
+
+                    }
+
+                    &:hover .overlay {
+                        opacity: 1;
+                    }
+
+                    &:hover i {
+                        opacity: 1;
+                    }
+
+                    &>i {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 1.4rem;
+                        color: #fff;
+                        opacity: 0;
+                        transition: opacity 0.5s ease;
+                        z-index: 999;
+                    }
+
+                    &>a {
+
+                        &>img {
+                            object-fit: cover;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+
+                .blog-title {
+                    text-align: center;
+                    padding: 1.4rem 1.1rem 0 1.1rem;
+
+                    &>a {
+                        color: $black-color;
+                        font-size: 1.3rem;
+                        transition: all 0.5s ease;
+
+                        &:hover {
+                            color: $primary-color;
+                        }
+
+                        &>h3 {
+                            padding-bottom: 1.2rem;
+                        }
+                    }
+
+                    &>p {
+                        padding-bottom: 1.2rem;
+                    }
+                }
+            }
+
+            
+        }
+        .blog-links {
+            text-align: center;
+            width: 100%;
+            margin: 3rem auto;
+
+            &>a {
+                padding: 15px 15px;
+                border: 2px solid $primary-color;
+                color: $primary-color;
+                font-weight: 600;
+                transition: all 0.5s ease;
+
+                &:hover {
+                    background-color: $primary-color;
+                    color: $white-color;
+                }
+
+                &>i {
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
+}
+// ==========Media Queries for {Medium Devices}=============>>
+@media screen and (max-width: 900px) {
+    section{
+        .container{
+            width: $container-md;
+            .blog-row{
+                grid-template-columns: 1fr 1fr;
+                .blog{
+                    width: 47vw;
+                    margin: 0 auto;
+
+                    .blog-title{
+                        &>a{
+                            &>h3{
+                                font-size: 1.1rem;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+// ==========Media Queries for {Small Devices}=============>>
+@media screen and (max-width: 600px) {
+    section{
+        .container{
+            width: $container-md;
+            .blog-row{
+                grid-template-columns: 1fr;
+                .blog{
+                    width: 96vw;
+                    margin: 0 auto;
+                }
+                .blog-title{
+                    &>a{
+                        &>h3{
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

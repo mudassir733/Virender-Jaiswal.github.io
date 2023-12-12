@@ -1,0 +1,220 @@
+main {
+    width: 100%;
+    height: 65vh;
+
+    &>header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.8rem 3%;
+        width: 100%;
+        position: relative;
+        border-bottom: 1px solid rgba($black-color, 0.2);
+
+        &>.social-media-icon {
+            display: flex;
+            align-items: center;
+            font-size: 1.3rem;
+            width: 40%;
+            justify-content: space-between;
+            color: $black-color;
+            &>.icons{
+                &>i {
+                    cursor: pointer;
+                    padding: 0 5px 0 0;
+                    
+    
+                }
+            }
+
+          
+
+            &>.left-links {
+                display: flex;
+                align-items: center;
+                gap: 1.4rem;
+
+                &>li {
+                    &>a {
+                        font-size: 0.8rem;
+                        color: rgba($black-color, 0.7);
+                        font-weight: 600;
+                        transition: all .5s ease;
+
+                        &:hover {
+                            color: $black-color;
+                        }
+
+                        &.active {
+                            color: $black-color;
+                        }
+
+                    }
+                }
+            }
+
+        }
+        &>.logo{
+            &>a{
+                &>img{
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+
+
+        .vip--group {
+            display: flex;
+            align-items: center;
+            width: 41%;
+            justify-content: space-between;
+
+            &>a {
+                color: $black-color;
+                font-size: 1rem;
+                border: 1px solid rgba($black-color, 0.5);
+                padding: 10px 20px;
+                font-weight: 600;
+                transition: all .4s ease;
+
+                &:hover {
+                    background-color: $black-color;
+                    border-color: $black-color;
+                    color: $white-color;
+                }
+            }
+         
+
+            &>.right_links {
+                display: flex;
+                align-items: center;
+                gap: 1.4rem;
+
+                &>li {
+                    &>a {
+                        font-size: 0.8rem;
+                        color: rgba($black-color, 0.5);
+                        font-weight: 600;
+                        transition: all .5s ease;
+
+                        &:hover {
+                            color: $black-color;
+                        }
+
+                        &.active {
+                            color: $black-color;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        
+
+        .menu {
+            color: $black-color;
+            display: none;
+            font-size: 1.1rem;
+            
+            &:active{
+                border: 1px dotted $white-color;
+                
+            }
+
+            &>.hamburgur {
+                cursor: pointer;
+                
+            }
+        }
+
+    }
+
+
+    // =======SiderBar For Responsive=======
+    .sider-bar{
+        background-color: $black-color;
+        width: 95%;
+        padding: 20px;
+        right: 0;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        box-shadow: 40px 0 20px rgba($black-color, 0.5);
+        transform: translateX(100%);
+        transition: transform .3s ease-in-out;
+        &>.links{
+            margin-top: 4.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            &>li{
+                &>a{
+                    color: rgba($white-color, 0.5);
+                    cursor: pointer;
+                    font-size: 0.9rem;
+                    transition: all .5s ease;
+                    &:hover{
+                        color: $white-color;
+                    }
+                }
+            } 
+        }
+        .close-sidebar{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            
+            &>i{
+                font-size: 1.7rem;
+                color: rgba($white-color, 0.5);
+                cursor: pointer;
+                transition: all .5s ease;
+                &:hover{
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    
+}
+// ==========Media Queries for {Medium Devices}=============>>
+@media screen and (max-width: 900px) {
+    main{
+        &>header{
+            &>.social-media-icon{
+                display: none;
+            }
+            .vip--group{
+                display: none;
+            }
+            .menu{
+                display: block;
+            }
+            
+        }
+        
+    }
+    
+} 
+// ==========Media Queries for {Small Devices}=============>>
+@media screen and (max-width: 600px) {
+    main{
+        height: 70vh;
+        &>header{
+            padding: 1.2rem 3%;
+        }
+
+        
+        
+    }
+    
+} 
+
+
+
+
+
+

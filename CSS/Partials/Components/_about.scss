@@ -1,0 +1,198 @@
+section{
+    &>h2{
+        color: rgba($black-color,  0.5);
+        font-weight: 300;
+        width: 87%;
+        margin: 0 auto;
+        padding-bottom: 2rem;
+    }
+    .container{
+        .about-row{
+            margin-top: 5rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            &>.right-column{
+                &>.divider{
+                    margin-bottom: 2.4rem;
+                }
+                &>.about-text{
+                    &>h2{
+                        font-size: 3rem;
+                        padding-bottom: 1.5rem;
+                    }
+                    &>p{
+                        padding-bottom: 3rem;
+                    }
+                    &>.read-more{
+                        color: $primary-color;
+                        font-size: 0.9rem;
+                        font-weight: 600;
+                        border: 1px solid rgba($black-color,  0.2);
+                        padding: 14px 20px;
+                        margin-top: 2rem;
+                        transition: all .5s ease;
+                        &:hover{
+                            background-color: $primary-color;
+                            color: $white-color;
+                            border-color: $primary-color;
+                        }
+                        &>i{
+                            padding-left: 14px;
+                        }
+                    }
+                }
+                .counter-box{
+                    margin-top: 6.5rem;
+                    border-top: 1px solid rgba($black-color,  0.2);
+                    padding: 20px;
+                    display: flex;
+                    gap: 2rem;
+                    &>.couner{
+                        display: flex;
+                        align-items: center;
+                        gap: 1.5rem;
+                        &>.number{
+                            font-size: 4rem;
+                            color: $primary-color;
+                            font-weight: 700;
+                           
+                        }
+                        &>.text{
+                            font-size: 1.1rem;
+                            width: 60%;
+                            line-height: 1.5;
+                            font-weight: 600;
+                        }
+                    }
+                }
+               
+            }
+        }
+        .experience-row{
+            margin-top: 7rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+           &>.left-column{
+            width: 75%;
+            &>.divider{
+                margin-bottom: 2.5rem;
+            }
+            .experience-text{
+                &>h2{
+                    font-size: 3rem;
+                    padding-bottom: 1.2rem;
+                }
+                &>.text{
+                    padding-bottom: 1rem;
+                }
+            }
+           }
+           &>.right-column{
+            margin-top: 2rem;
+             .marketing-box{
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                padding: 25px;
+                border-bottom: 1px solid rgba($black-color,  0.2);
+                &>span{
+                    color: $primary-color;
+                    font-weight: 700;
+                    font-size: 1.6rem;
+                }
+                &>h4{
+                    font-size: 1.5rem;
+                }
+             }
+           }
+        }
+    }
+}
+// ==========Media Queries for {Medium Devices}=============>>
+@media screen and (max-width: 900px) {
+    section{
+        &>h2{
+            font-size: 2rem;
+        }
+        .container{
+            width: $container-md;
+            .about-row{
+                gap: 3rem;
+                grid-template-columns: 1fr;
+                .right-column{
+                    &>.about-text{
+                        &>h2{
+                            font-size: 1.9rem;
+                        }
+                    }
+
+                    .counter-box{
+                        justify-content: space-around;
+                      .couner{
+                        .number{
+                            font-size: 3rem;
+                        }
+                        &>.text{
+                            width: 100%;
+                            font-size: 0.9rem;
+                        }
+                      }
+                    }
+                   
+                }
+            }
+            .experience-row{
+                grid-template-columns: 1fr;
+                &>.left-column{
+                    width: 100%;
+                }
+                &>.right-column{
+                    .marketing-box{
+                        display: block;
+                        padding-left: 0;
+                        &>h4{
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// ==========Media Queries for {Small Devices}=============>>
+@media screen and (max-width: 600px) {
+    section{
+        &>h2{
+            font-size: 1.4rem;
+        }
+        .container{
+            width: $container-md;
+            .about-row{
+                  grid-template-columns: 1fr;
+                  &>.left-column{
+                    &>img{
+                        width: 96vw;
+                        margin: 0 auto;
+                    }
+                  }
+                .right-column{
+
+                    .counter-box{
+                        gap: 1rem;
+                      .couner{
+                        .number{
+                            font-size: 10vw;
+                        }
+                        &>.text{
+                            width: 100%;
+                            font-size: 4vw;
+                        }
+                      }
+                    }
+                   
+                }
+            }
+        }
+    }
+}

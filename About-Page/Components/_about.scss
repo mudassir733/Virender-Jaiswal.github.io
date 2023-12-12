@@ -1,0 +1,267 @@
+section{
+    .container{
+        .about-row{
+            margin-top: 5rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            .left-column{
+                &>img{
+                    width: 37vw;
+                }
+            }
+            &>.right-column{
+                &>.divider{
+                    margin-bottom: 2.4rem;
+                }
+                &>.about-text{
+                    &>h2{
+                        font-size: 3rem;
+                        padding-bottom: 1.5rem;
+                    }
+                    &>.text{
+                        width: 60%;
+                        padding-bottom: 0;
+                        
+                    }
+                    &>p{
+                        padding: 1rem 0;
+                    }
+                    .details{
+                        &>.text{
+                            padding-left: 25px;
+                            font-weight: 400;
+                            position: relative;
+                            width: 70%;
+                            line-height: 1.7;
+                            &::before{
+                                position: absolute;
+                                content: '';
+                                width: 15px;
+                                height: 15px;
+                                background-color: #dadada;
+                                border-radius: 50%;
+                                left: -2px;
+                                top: 5px;
+                            }
+                        }
+                    }
+        
+                }
+                .counter-box{
+                    margin-top: 3rem;
+                    border-top: 1px solid rgba($black-color,  0.2);
+                    padding: 20px;
+                    display: flex;
+                    gap: 1rem;
+                    &>.couner{
+                        display: flex;
+                        align-items: center;
+                        gap: 1.5rem;
+                        &>.number{
+                            font-size: 4rem;
+                            color: $primary-color;
+                            font-weight: 700;
+                           
+                        }
+                        &>.text{
+                            font-size: 1.1rem;
+                            width: 60%;
+                            line-height: 1.5;
+                            font-weight: 600;
+                        }
+                    }
+                }
+               
+            }
+        }
+        .title-container{
+            padding: 9rem 0 2rem 0;
+            &>h2{
+                font-size: 3rem;
+                text-align: center;
+                width: 90%;
+                margin: 0 auto;
+                color: rgba($black-color,  0.4);
+            }
+            &>.logos{
+                padding-top: 8rem;
+                text-align: center;
+                &>h4{
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    letter-spacing: 1.5px;
+                    font-size: 0.9rem;
+                    padding-bottom: 1.1rem;
+                }
+                &>.logos-row{
+                    display: flex;
+                    gap: 20px;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+        .experience-row{
+            margin-top: 7rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+           &>.left-column{
+            width: 75%;
+            &>.divider{
+                margin-bottom: 2.5rem;
+            }
+            .experience-text{
+                &>h2{
+                    font-size: 3rem;
+                    padding-bottom: 1.2rem;
+                }
+                &>.text{
+                    padding-bottom: 1rem;
+                }
+            }
+           }
+           &>.right-column{
+            margin-top: 2rem;
+             .marketing-box{
+                display: flex;
+                gap: 2rem;
+                padding: 20px;
+                border-bottom: 1px solid rgba($black-color,  0.2);
+
+                &>span{
+                    color: $primary-color;
+                    font-weight: 700;
+                    font-size: 1.6rem;
+                }
+                &>.description{
+                    &>h4{
+                        font-size: 1.5rem;
+                        
+                    }
+                    &>p{
+                        padding-top: 0.7rem;
+                    }
+                }
+                
+             }
+           }
+        }
+    }
+}
+// ==========Media Queries for {Medium Devices}=============>>
+@media screen and (max-width: 900px) {
+    section{
+        .container{
+            width: $container-md;
+            .about-row{
+                gap: 3rem;
+                grid-template-columns: 1fr;
+                .left-column{
+                    &>img{
+                        width: 100%;
+                    }
+                }
+                .right-column{
+                    &>.about-text{
+                        &>h2{
+                            font-size: 1.9rem;
+                        }
+                        &>.text{
+                            width: 100%;
+                        }
+                        .details{
+                            &>.text{
+                                line-height: 2;
+                                width: 100%;
+                                &::before{
+                                    top: 7px;
+                                    left: 1px;
+                                }
+                            }
+                        }
+                    }
+
+                    .counter-box{
+                        justify-content: space-around;
+                      .couner{
+                        .number{
+                            font-size: 3rem;
+                        }
+                        &>.text{
+                            width: 100%;
+                            font-size: 0.9rem;
+                        }
+                      }
+                    }
+                   
+                }
+            }
+            .title-container{
+                &>h2{
+                    font-size: 2rem;
+                }
+            }
+            .experience-row{
+                grid-template-columns: 1fr;
+                &>.left-column{
+                    width: 100%;
+                }
+                &>.right-column{
+                    .marketing-box{
+                        display: block;
+                        padding-left: 0;
+                       .description{
+                        &>h4{
+                            font-size: 1.3rem;
+                        }
+                       }
+                    }
+                }
+            }
+        }
+    }
+}
+// ==========Media Queries for {Small Devices}=============>>
+@media screen and (max-width: 600px) {
+    section{
+        .container{
+            width: $container-md;
+            .about-row{
+                  grid-template-columns: 1fr;
+                  .left-column{
+                    &>img{
+                        width: 100%;
+                    }
+                  }
+                  &>.left-column{
+                    &>img{
+                        width: 96vw;
+                        margin: 0 auto;
+                    }
+                  }
+                .right-column{
+
+                    .counter-box{
+                        gap: 1rem;
+                      .couner{
+                        .number{
+                            font-size: 10vw;
+                        }
+                        &>.text{
+                            width: 100%;
+                            font-size: 4vw;
+                        }
+                      }
+                    }
+                   
+                }
+            }
+            .title-container{
+                &>h2{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}

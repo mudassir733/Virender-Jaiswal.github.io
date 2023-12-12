@@ -1,0 +1,67 @@
+// ==========Font Family Linked============
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+// ======Color Variables========
+$primary-color: #f44a25;
+$white-color: #ffffff;
+$black-color: #1B1F29;
+$container-lg: 93%;
+$container-md: 96%;
+
+
+*::selection{
+   background-color: $primary-color;
+   color: $white-color;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: $white-color;
+    
+}
+p{
+    color: #1b1f297e;
+    font-size: 0.9rem;
+    line-height: 1.9;
+}
+
+h1,h2,h3,h4{
+    line-height: 1.4;
+}
+h2{
+    color: $black-color;
+}
+.divider{
+    width: 52px;
+    height: 4px;
+    background-color: $primary-color;
+}
+section{
+    padding: 5rem 0;
+    &>h2{
+        text-align: center;
+        font-size: 2.9rem;
+    }
+    &>.divider{
+        margin: 0 auto;
+        margin-bottom: 2.6rem;
+    }
+}
+.text{
+    font-size: 0.9rem;
+    color: rgba($black-color,  0.8);
+    font-weight: 600;
+}
+.container{
+   width: $container-lg;
+   margin: 0 auto;
+}
+

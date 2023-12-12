@@ -1,0 +1,95 @@
+section{
+    &>.title {
+        text-align: center;
+
+        &>.divider {
+            margin: 0 auto 2rem auto;
+        }
+
+        &>h2 {
+            font-size: 3rem;
+            padding-bottom: 1rem;
+        }
+        &>p{
+            width: 50%;
+            margin: 0 auto;
+        }
+
+    }
+    &>.container{
+       &>.testimonial-row{
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 4rem 1rem;
+          margin-top: 4rem;
+          &>.testimonial-column{
+            &>.quote{
+                padding-bottom: 1rem;
+                &>i{
+                    color: $primary-color;
+                    font-size: 1.6rem;
+                }
+            }
+            &>.text{
+                font-size: 1.1rem;
+                width: 85%;
+                font-weight: 600;
+                padding-bottom: 1.1rem;
+            }
+          }
+
+          .avatar{
+            .avatar-image{
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                &>img{
+                    border-radius: 50%;
+                }
+                &>span{
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    color: rgba($black-color, 0.5);
+                }
+            }
+          }
+         
+       }
+    }
+}
+// ==========Media Queries for {Medium Devices}=============>>
+@media screen and (max-width: 900px) {
+    section{
+        .title{
+            &>h2{
+                font-size: 1.9rem;
+            }
+            &>p{
+                width: 95%;
+            }
+        }
+        .container{
+            width: $container-md;
+            &>.testimonial-row{
+                &>.testimonial-column{
+                    &>.text{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+// ==========Media Queries for {Small Devices}=============>>
+@media screen and (max-width: 600px) {
+   section{
+      .container{
+         width: $container-md;
+         &>.testimonial-row{
+            grid-template-columns: 1fr;
+         }
+      }
+   }
+}
